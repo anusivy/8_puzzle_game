@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Puzzle</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="puzzle.js">
+        </script>
+        <style>
+            .start {
+                border-radius: 5px 5px 5px 5px;
+                color: black;
+                cursor: pointer;
+                font-size: 18px;
+                height: 35px;
+                width: 200px;
+            }
+            
+            .wrap {
+                background-color: #FAFAFA;
+                width: 100%;
+                height: 100%;
+                padding: 30px;
+            }
+            .game1 {
+                margin: 30px;
+            }
+            .game2 {
+                margin: 30px;
+            }
+            
+            #button_start {
+                -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+                -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+                box-shadow: inset 0px 1px 1px 0px #ffffff;
+                background-color: #e2e7eb;
+                -moz-border-radius: 6;
+                -webkit-border-radius: 6;
+                border-radius: 6;
+                border: 1px solid #dcdcdc;
+                
+                color: #000;
+                font-family: arial;
+                font-size: 15;
+                font-weight: bold;
+                padding: 6px 15px;
+                text-decoration: none;
+                text-shadow: 1px 1px 0px #ffffff;
+                cursor: pointer;
+				color:#000;
+            }
+			 #button_start:hover{
+			 	background-color: #CED8DB
+			 }
+			 p{
+			 	color: #000;
+				text-shadow: 1px 1px 0px #ECEDEF;
+				font-size:17px;
+			 }
+        </style>
+        <script>
+            $(function(){
+                $(".game1").puzzle({
+                    player: "user"
+                });
+               $(".game2").puzzle({
+                    player: "computer"
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+            
+            <div class="game1">
+            </div>
+            <div class="game2">
+            </div>
+			<div style="display:inline-block;vertical-align:top;">
+			<p>You can play the first puzzle,
+		    Computer will play the second.</p>
+			<p> Have fun!!!</p>
+            <h2 id = "win" style = "color:darkgreen;"></h2>
+            <button id="button_start" class="start">
+                Start New Game
+            </button>
+            
+            </div>
+			
+            <a name="fb_share"></a>
+            <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript">
+            </script>
+			</div>
+        </div>
+    </body>
+</html>
